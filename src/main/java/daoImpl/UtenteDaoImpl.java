@@ -47,8 +47,7 @@ public class UtenteDaoImpl implements UtenteDao {
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
 		EntityManager entitymanager = emFactory.createEntityManager();
 		entitymanager.getTransaction().begin();
-		
-		
+	
 		UtenteDTO utenteDto = entitymanager.find(UtenteDTO.class, id);
 		
 		entitymanager.getTransaction().commit();
@@ -63,8 +62,6 @@ public class UtenteDaoImpl implements UtenteDao {
 		entitymanager.getTransaction().begin();
 		
 	    List<UtenteDTO> listaUtentiDTO = listaUtenti();
-    
-	    UtenteDTO utenteFinal = new UtenteDTO();
 	    
 	    for (UtenteDTO u : listaUtentiDTO) {
 	    	if (u.getUsername().equals(username)) {
@@ -81,9 +78,7 @@ public class UtenteDaoImpl implements UtenteDao {
 		entitymanager.getTransaction().begin();
 		
 	    List<UtenteDTO> listaUtentiDTO = listaUtenti();
-    
-	    UtenteDTO utenteFinal = new UtenteDTO();
-	    
+   
 	    for (UtenteDTO u : listaUtentiDTO) {
 	    	if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
 	    		
@@ -99,13 +94,9 @@ public class UtenteDaoImpl implements UtenteDao {
 		entitymanager.getTransaction().begin();
 		
 	    List<UtenteDTO> listaUtentiDTO = listaUtenti();
-	    
-    UtenteDTO utenteFinal = new UtenteDTO();
-	    
+    
 	    for (UtenteDTO u : listaUtentiDTO) {
-	    	if (u.getPassword().equals(password)) {
-
-    		
+	    	if (u.getPassword().equals(password)) {  		
 	    		return u;
 	    	}
 	    } return null;
