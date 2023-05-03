@@ -1,5 +1,5 @@
-META-INF/
-target/
-.classpath
-.settings/
-src/.DS_Store
+/src/main/java/META-INF/persistence.xml
+META-INF/*
+target/**
+.settings/*
+target/classes/META-INF/MANIFEST.MF
