@@ -20,5 +20,8 @@
          <property name="eclipselink.ddl-generation" value="create-tables"/> 
       </properties>
     <!-- Sono un commento  -->
+    <!-- Sono un commento  -->
+    <!-- Sono un commento  -->
+    <!-- Sono un commento  -->
    </persistence-unit>
 </persistence>
