@@ -64,8 +64,6 @@ public class UtenteDaoImpl implements UtenteDao {
 
 		List<UtenteDTO> listaUtentiDTO = listaUtenti();
 
-		UtenteDTO utenteFinal = new UtenteDTO();
-
 		for (UtenteDTO u : listaUtentiDTO) {
 			if (u.getUsername().equals(username)) {
 
@@ -83,8 +81,6 @@ public class UtenteDaoImpl implements UtenteDao {
 
 		List<UtenteDTO> listaUtentiDTO = listaUtenti();
 
-		UtenteDTO utenteFinal = new UtenteDTO();
-
 		for (UtenteDTO u : listaUtentiDTO) {
 			if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
 
@@ -101,8 +97,6 @@ public class UtenteDaoImpl implements UtenteDao {
 		entitymanager.getTransaction().begin();
 
 		List<UtenteDTO> listaUtentiDTO = listaUtenti();
-
-		UtenteDTO utenteFinal = new UtenteDTO();
 
 		for (UtenteDTO u : listaUtentiDTO) {
 			if (u.getPassword().equals(password)) {
