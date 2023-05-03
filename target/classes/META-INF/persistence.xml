@@ -20,4 +20,13 @@
          <property name="eclipselink.ddl-generation" value="create-tables"/> 
       </properties>
    </persistence-unit>
+<!--  commento -->
+<!--  commento -->
+<!--  commento -->
+<!--  commento -->
+<!--  commento -->
+<!--  commento -->
+<!--  commento -->
+<!--  commento -->
+<!--  commento -->
 </persistence>
