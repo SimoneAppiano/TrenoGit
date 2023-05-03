@@ -1,0 +1,4 @@
+META-INF/*
+target/**
+.settings/*
+target/classes/META-INF/MANIFEST.MF
