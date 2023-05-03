@@ -12,5 +12,5 @@ public interface UtenteDao{
 	public void deleteUtente();
 	public UtenteDTO findByID(int id);
 	public List<UtenteDTO> listaUtenti();
-	public UtenteDTO findByUsernameEPassword(String username, String password);
+	public Boolean findByUsernameEPassword(String username, String password);
 }
