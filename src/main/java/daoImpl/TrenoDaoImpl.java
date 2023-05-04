@@ -48,9 +48,18 @@ public class TrenoDaoImpl implements TrenoDao{
 		return null;
 	}
 
-	public void deleteTreno() {
-		// TODO Auto-generated method stub
+	public void deleteTreno(int id) {
+
+		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
+		EntityManager entitymanager = emFactory.createEntityManager();
+		entitymanager.getTransaction().begin();
 		
+		TrenoDTO t = entitymanager.find(TrenoDTO.class, id);
+		entitymanager.remove(t);
+		
+		entitymanager.getTransaction().commit();
+		entitymanager.close();
+		emFactory.close();	
 	}
 	
 	

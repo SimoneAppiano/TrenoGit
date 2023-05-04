@@ -15,8 +15,16 @@ import dto.*;
 public class TestJPA {
 
 	public static void main(String[] args) {
-		 creaTreno();
+		eliminaTreno();
+		// creaTreno();
 		//utenti();
+	}
+	
+	public static void eliminaTreno() {
+		TrenoDao trenoDao = TrenoDaoImpl.getInstance();
+		
+		trenoDao.deleteTreno(21);
+		
 	}
 
 	public static void utenti() {
