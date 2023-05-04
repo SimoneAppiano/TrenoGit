@@ -18,6 +18,10 @@ public interface UtenteDao {
 	public UtenteDTO findByID(int id);
 
 	public List<UtenteDTO> listaUtenti();
+<<<<<<< HEAD
 
 	public boolean findByUsernameEPassword(String username, String password);
+=======
+	public Boolean findByUsernameEPassword(String username, String password);
+>>>>>>> eleonora
 }
