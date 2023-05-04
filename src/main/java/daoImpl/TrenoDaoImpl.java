@@ -69,6 +69,21 @@ public class TrenoDaoImpl implements TrenoDao{
 	    System.out.println(entitymanager.createQuery(query).getResultList() + "Sono nella lista treni");
 		return entitymanager.createQuery(query).getResultList();
 	}
+	
+	public List<TrenoDTO> listaTreniFinali() {
+		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
+		EntityManager entitymanager = emFactory.createEntityManager();
+		entitymanager.getTransaction().begin();
+		
+		CriteriaBuilder builder = entitymanager.getCriteriaBuilder();
+	    CriteriaQuery<TrenoDTO> query = builder.createQuery(TrenoDTO.class);
+
+
+	    Root<TrenoDTO> variableRoot = query.from(TrenoDTO.class);
+	    query.select(variableRoot);
+	    System.out.println(entitymanager.createQuery(query).setMaxResults(5).getResultList() + "Sono nella lista treni");
+		return entitymanager.createQuery(query).getResultList();
+	}
 
 
 }

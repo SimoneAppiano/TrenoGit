@@ -75,7 +75,7 @@ public class UtenteDaoImpl implements UtenteDao {
 	    
 	}
 	
-	public UtenteDTO findByUsernameEPassword(String username, String password) {
+	public boolean findByUsernameEPassword(String username, String password) {
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
 		EntityManager entitymanager = emFactory.createEntityManager();
 		entitymanager.getTransaction().begin();
@@ -87,9 +87,9 @@ public class UtenteDaoImpl implements UtenteDao {
 	    for (UtenteDTO u : listaUtentiDTO) {
 	    	if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
 	    		
-	    		return u;
+	    		return true;
 	    	}
-	    } return null;
+	    } return false;
 	    
 	}
 
