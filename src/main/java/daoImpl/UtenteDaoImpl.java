@@ -82,9 +82,9 @@ public class UtenteDaoImpl implements UtenteDao {
 	    for (UtenteDTO u : listaUtentiDTO) {
 	    	if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
 	    		
-	    		return u;
+	    		return true;
 	    	}
-	    } return null;
+	    } return false;
 	    
 	}
 
