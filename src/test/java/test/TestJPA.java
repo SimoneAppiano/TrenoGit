@@ -15,8 +15,8 @@ import dto.*;
 public class TestJPA {
 
 	public static void main(String[] args) {
-		eliminaTreno();
-		// creaTreno();
+		// eliminaTreno();
+		creaTreno();
 		//utenti();
 	}
 	
