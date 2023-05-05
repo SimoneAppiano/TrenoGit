@@ -48,9 +48,18 @@ public class TrenoDaoImpl implements TrenoDao{
 		return null;
 	}
 
-	public void deleteTreno() {
-		// TODO Auto-generated method stub
+	public void deleteTreno(int id) {
+
+		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
+		EntityManager entitymanager = emFactory.createEntityManager();
+		entitymanager.getTransaction().begin();
 		
+		TrenoDTO t = entitymanager.find(TrenoDTO.class, id);
+		entitymanager.remove(t);
+		
+		entitymanager.getTransaction().commit();
+		entitymanager.close();
+		emFactory.close();	
 	}
 	
 	
@@ -67,6 +76,21 @@ public class TrenoDaoImpl implements TrenoDao{
 	    Root<TrenoDTO> variableRoot = query.from(TrenoDTO.class);
 	    query.select(variableRoot);
 	    System.out.println(entitymanager.createQuery(query).getResultList() + "Sono nella lista treni");
+		return entitymanager.createQuery(query).getResultList();
+	}
+	
+	public List<TrenoDTO> listaTreniFinali() {
+		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
+		EntityManager entitymanager = emFactory.createEntityManager();
+		entitymanager.getTransaction().begin();
+		
+		CriteriaBuilder builder = entitymanager.getCriteriaBuilder();
+	    CriteriaQuery<TrenoDTO> query = builder.createQuery(TrenoDTO.class);
+
+
+	    Root<TrenoDTO> variableRoot = query.from(TrenoDTO.class);
+	    query.select(variableRoot);
+	    System.out.println(entitymanager.createQuery(query).setMaxResults(5).getResultList() + "Sono nella lista treni");
 		return entitymanager.createQuery(query).getResultList();
 	}
 
