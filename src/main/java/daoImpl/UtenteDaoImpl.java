@@ -134,9 +134,4 @@ public class UtenteDaoImpl implements UtenteDao {
 		return entitymanager.createQuery(query).getResultList();
 	}
 
-<<<<<<< HEAD
-	
-
-=======
->>>>>>> 32a143c906098fe64d499039d31570844fa2a93a
 }
