@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: miste
+=======
+Built-By: anton
+>>>>>>> 32a143c906098fe64d499039d31570844fa2a93a
 Build-Jdk: 17.0.6
 Created-By: Maven Integration for Eclipse
 
