@@ -1,9 +1,14 @@
 Manifest-Version: 1.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 Built-By: miste
 =======
 Built-By: anton
 >>>>>>> 32a143c906098fe64d499039d31570844fa2a93a
 Build-Jdk: 17.0.6
+=======
+Built-By: eleonorapisacane
+Build-Jdk: 19.0.1
+>>>>>>> eleonora
 Created-By: Maven Integration for Eclipse
 
