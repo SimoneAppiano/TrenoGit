@@ -20,12 +20,15 @@ public abstract class TrenoBuilder {
 //		}	
 //		sigla= nuovaSigla;
 		if (e1.siglaSuggerita(sigla) == sigla) {
+			
 			Treno t = new Treno();
+			
 			for (int i = 0; i < sigla.length(); i++) {
 				Vagone v;
 				switch (sigla.charAt(i)) {
 				case 'H':
 					v = costruisciLocomotiva();
+					//inserire peso trainante
 					t.aggiungiVagone(v);
 					break;
 				case 'P':
@@ -45,6 +48,7 @@ public abstract class TrenoBuilder {
 					t.aggiungiVagone(v);
 				}		
 			}
+			//controllo peso
 		return t;
 		}
 		return null;

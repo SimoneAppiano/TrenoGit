@@ -57,6 +57,7 @@ public class UtenteDaoImpl implements UtenteDao {
 		return utenteDto;
 	}
 	
+	
 	public UtenteDTO findByUsername(String username) {
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
 		EntityManager entitymanager = emFactory.createEntityManager();
@@ -133,21 +134,9 @@ public class UtenteDaoImpl implements UtenteDao {
 		return entitymanager.createQuery(query).getResultList();
 	}
 
-	public UtenteDTO findByUsername(String username) {
-		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
-		EntityManager entitymanager = emFactory.createEntityManager();
-		entitymanager.getTransaction().begin();
+<<<<<<< HEAD
+	
 
-		List<UtenteDTO> listaUtentiDTO = listaUtenti();
-
-		for (UtenteDTO u : listaUtentiDTO) {
-			if (u.getUsername().equals(username)) {
-
-				return u;
-			}
-		}
-		return null;
-
-	}
-
+=======
+>>>>>>> 32a143c906098fe64d499039d31570844fa2a93a
 }

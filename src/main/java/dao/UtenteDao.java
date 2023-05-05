@@ -21,5 +21,4 @@ public interface UtenteDao {
 	
 	public boolean findByUsernameEPassword(String username, String password);
 
-	public boolean findByUsernameEPassword(String username, String password);
 }
