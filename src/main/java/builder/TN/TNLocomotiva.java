@@ -6,7 +6,7 @@ public class TNLocomotiva extends Locomotiva {
 
 	public TNLocomotiva() {
 		super(500);
-		super.setPeso(20);
+		super.setPeso(40);
 	}
 
 }

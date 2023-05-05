@@ -6,7 +6,7 @@ public class TNRistorante extends Ristorante {
 
 	public TNRistorante() {
 		super(20);
-		super.setPeso(20);
+		super.setPeso(40);
 	}
 
 }

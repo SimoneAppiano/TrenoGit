@@ -6,7 +6,7 @@ public class TNCargo extends Cargo {
 
 	public TNCargo() {
 		super();
-		super.setPeso(40);
+		super.setPeso(80);
 	}
 
 }
