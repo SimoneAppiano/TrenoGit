@@ -29,7 +29,7 @@ public class TrenoDaoImpl implements TrenoDao{
 	
 	public TrenoDTO add(Treno treno, UtenteDTO utente) {
 		
-		TrenoDTO trenoDTO = new TrenoDTO(treno.getSigla(), 0, utente); // treno.getPeso() 
+		TrenoDTO trenoDTO = new TrenoDTO(treno.getSigla(), treno.getPeso(), utente); // treno.getPeso() 
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
 		EntityManager entitymanager = emFactory.createEntityManager();
 		entitymanager.getTransaction().begin();
