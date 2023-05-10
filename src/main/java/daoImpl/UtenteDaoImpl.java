@@ -57,6 +57,7 @@ public class UtenteDaoImpl implements UtenteDao {
 		return utenteDto;
 	}
 	
+	
 	public UtenteDTO findByUsername(String username) {
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
 		EntityManager entitymanager = emFactory.createEntityManager();
